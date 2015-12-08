@@ -1,0 +1,382 @@
+version 12.2
+no service pad
+service timestamps debug uptime
+service timestamps log uptime
+service password-encryption
+!
+hostname 999-example-01
+!
+enable secret 5 bobsuncle
+enable password 7 bobsaunt
+!
+no aaa new-model
+clock timezone utc -5
+system mtu routing 1500
+vtp domain example.local
+vtp mode transparent
+ip subnet-zero
+ip domain-name example.local
+ip name-server 172.99.1.60
+!
+!         
+!
+!
+no file verify auto
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+vlan internal allocation policy ascending
+!
+vlan 11
+ name Students
+!
+vlan 100
+ name voice
+!
+vlan 120
+ name vlan-mgnt
+!
+!
+interface Port-channel1
+ description Uplink  210-server-01
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!         
+interface FastEthernet0/1
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/2
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/3
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/4
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/5
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/6
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/7
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/8
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/9
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/10
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/11
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/12
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/13
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/14
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/15
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/16
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/17
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/18
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/19
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode passive
+!
+interface FastEthernet0/20
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/21
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/22
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/23
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode passive
+!
+interface FastEthernet0/24
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ channel-group 1 mode passive
+!
+interface FastEthernet0/25
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/26
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/27
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/28
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/29
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/30
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/31
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/32
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/33
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/34
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/35
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!         
+interface FastEthernet0/36
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/37
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/38
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/39
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/40
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/41
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/42
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/43
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/44
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/45
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/46
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/47
+ switchport access vlan 11
+ switchport mode access
+ switchport voice vlan 100
+ spanning-tree portfast
+!
+interface FastEthernet0/48
+ description Uplink  210-core-04
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/1
+ description Uplink  lib-edge-01
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/2
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/3
+ description Uplink  lower-edge-02
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface GigabitEthernet0/4
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ no ip route-cache
+ no ip mroute-cache
+ shutdown
+!
+interface Vlan100
+ description Voice-Lan
+ no ip address
+ no ip route-cache
+ no ip mroute-cache
+!
+interface Vlan999999
+ ip address 172.99.120.3 255.255.255.0
+!
+ip classless
+ip http server
+!
+!
+snmp-server community doritos RO
+snmp-server location Rack,ColdRoom
+!
+control-plane
+!
+!
+line con 0
+line vty 0 4
+ password 7 cheetos
+ login
+line vty 5 15
+ login
+!
+ntp clock-period 36029461
+ntp server 204.2.134.163
+end
+
